@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+
+        <section>
+
+            <div class="all">
+                <div class="image">
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
+                </div>
+                <div class="form-container">
+                    <div class="text">
+                        <h1>Yeni Bir Hesap Oluştur</h1>
+                        <p>Hizli ve kolaydir.</p>
+                    </div>
+
+                    <form>
+                        <div class="name-group">
+                            <input type="text" placeholder="Adin" class="half-input" required>
+                            <input type="text" placeholder="Soyadin" class="half-input" required>
+                        </div>
+
+                        <div class="date-group">
+                            <label for="date">Doğum Tarihi</label>
+                            <div class="date-select">
+                                <select required>
+                                    <option value="">Gün</option>
+                                    <script>
+                                        for (let i = 1; i <= 31; i++) {
+                                            document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                                <select required>
+                                    <option value="">Ay</option>
+                                    <option value="1">Ocak</option>
+                                    <option value="2">Şubat</option>
+                                    <option value="3">Mart</option>
+                                    <option value="4">Nisan</option>
+                                    <option value="5">Mayis</option>
+                                    <option value="6">Haziran</option>
+                                    <option value="7">Temmuz</option>
+                                    <option value="8">Ağustos</option>
+                                    <option value="9">Eylül</option>
+                                    <option value="10">Ekim</option>
+                                    <option value="11">Kasim</option>
+                                    <option value="12">Aralik</option>
+                                </select>
+                                <select required>
+                                    <option value="">Yil</option>
+                                    <script>
+                                        const currentYear = new Date().getFullYear();
+                                        for (let i = currentYear; i >= 1900; i--) {
+                                            document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="gender-group">
+                            <label>Cinsiyet</label>
+                            <div class="gender-options">
+                                <div class="border">
+                                    <label for="female">Kadin</label>
+                                    <input type="radio" id="female" name="gender" value="Kadin" required>
+                                </div>
+                                <div class="border">
+                                    <label for="male">Erkek</label>
+                                    <input type="radio" id="male" name="gender" value="Erkek">
+                                </div>
+                                <div class="border">
+                                    <label for="custom">Özel</label>
+                                    <input type="radio" id="custom" name="gender" value="Özel">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="email" placeholder="Cep telefonu numarasi veya e-posta" required>
+
+                        <input type="password" placeholder="Yeni şifre" required>
+
+                        <p class="info-text">Hizmetimizi kullanan kişiler senin iletişim bilgilerini Facebook'a yüklemiş
+                            olabilir. Daha fazla bilgi al.</p>
+                        <p class="terms">Kaydol düğmesine tiklayarak, <a href="#">Koşullarimizi</a>, <a
+                                href="#">Gizlilik İlkemizi</a> ve <a href="#">Çerezler İlkemizi</a> kabul etmiş olursun.
+                            Bizden SMS Bildirimleri alabilir ve bu bildirimleri istediğin zaman durdurabilirsin.</p>
+
+                        <button type="submit" class="register-btn">Kaydol</button>
+                    </form>
+
+                    <p class="login-link">Hesabin zaten var mi?</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <script src="./main.js"></script>
+    </body>
+
+</html>
